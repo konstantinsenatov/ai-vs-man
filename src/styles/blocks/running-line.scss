@@ -1,0 +1,40 @@
+.running-line {
+	background: url('../images/noise.png'), #1A1A1A 0 0 / 100% 100% no-repeat;
+	padding: 110px 0;
+	pointer-events: none;
+	@media (max-width: 1920px){
+		padding: 5.73vw 0;
+	}
+	@media (max-width: 768px){
+		padding: 10.53vw 0;
+	}
+	&__container {
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+	&__swiper {
+		.swiper-wrapper {
+			transition-timing-function: linear!important;
+		}
+	}
+	&__slide {
+		padding-left: 40px;
+		display: inline-block;
+		max-width: 650px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: 1920px){
+			padding-left: 2.08vw;
+			max-width: 33.85vw;
+		}
+		@media (max-width: 768px){
+			padding-left: 5.26vw;
+			max-width: 107.89vw;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

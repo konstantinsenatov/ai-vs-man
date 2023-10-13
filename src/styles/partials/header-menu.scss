@@ -1,0 +1,214 @@
+
+.menu-header {
+	overflow: hidden;
+	overflow-y: scroll;
+	background: url('../images/noise.png'), #1A1A1A 0 0 / 100% 100% no-repeat;
+	position: fixed;
+	z-index: 999;
+	top: -110%;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	height: calc(100% - 17.5vw);
+	transition: all 0.3s ease 0s;
+	display: none;
+	@media (max-width: 768px){
+		display: block;
+	}
+	&.js-active {
+		top: 17.5vw;
+		opacity: 1;
+	}
+	.menu-switch-content-general-inner {
+		min-width: 100vw;
+	}
+	&__body {
+		padding: 0 2.63vw;
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+		background: url('../images/hero/circle.svg') -50vw 60% / 150vw 150vw no-repeat;
+	}
+	&__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		min-height: 21.05vw;
+		color: var(--white, #FFF);
+		leading-trim: both;
+		text-edge: cap;
+		font-family: Miratrix;
+		font-size: 6.84vw;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 120%;
+		border-left: 0.26vw solid #737373;
+		border-right: 0.26vw solid #737373;
+	}
+	&__list {
+		flex: 1 1 auto;
+		padding-top: 3.95vw;
+		padding-bottom: 3.95vw;
+		border-left: 0.26vw solid #737373;
+		border-right: 0.26vw solid #737373;
+		position: relative;
+		&::before,&::after{
+			content:'';
+			position: absolute;
+			left: -2.63vw;
+			width: calc(100% + 5.26vw);
+			height: 0.26vw;
+			background-color: #737373;
+		}
+		&::before{
+			top: 0;
+		}
+		&::after{
+			bottom: 0;
+		}
+	}
+	&__item {
+		margin-bottom: 1.32vw;
+	}
+	&__link {
+		display: block;
+		padding: 3.95vw 2.63vw;
+		color: var(--white, #FFF);
+		leading-trim: both;
+		text-edge: cap;
+		font-family: Fira Sans;
+		font-size: 5.26vw;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+		letter-spacing: 0.1vw;
+		text-transform: uppercase;
+	}
+	&__socials {
+		padding: 7.89vw 2.63vw;
+		border-left:0.26vw solid #737373;
+		border-right:0.26vw solid #737373;
+		&-wrapper {
+			padding: 0 2.63vw;
+		}
+	}
+	
+	
+	&__bottom {
+		padding: 7.89vw 2.63vw;
+		border-left:0.26vw solid #737373;
+		border-right:0.26vw solid #737373;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		&::before{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: #737373;
+		}
+		&-wrapper {
+			padding: 0 2.63vw;
+		}
+		&-left {
+			width: 31.58vw;
+			height: 13.16vw;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&-right {
+			color: var(--white, #FFF);
+			text-align: right;
+			font-family: Fira Sans;
+			font-size: 3.68vw;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 165.813%; /* 23.214px */
+			letter-spacing: 0.2vw;
+		}
+	}
+
+	.menu-switcher-content {
+		
+	}
+	.menu-switcher-content-button {
+		width: 7.63vw;
+		height: 7.63vw;
+		top: 6%;
+	}
+}
+
+
+
+
+.menu-switch-content {
+	position: relative;
+	border-radius: 1rem;
+	--position: 97%;
+}
+
+.menu-switch-content-common {
+	width: 100%;
+	height: 100%;
+}
+
+.menu-switch-content-before {
+	position: absolute;
+	z-index: 99;
+	inset: 0;
+	width: var(--position);
+	background: url('../images/noise.png'), #1A1A1A 0 0 / 100% 100% no-repeat;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	>*{
+		flex: 1 1 100%;
+	}
+}
+.menu-switch-content-after {
+	background: url('../images/noise.png'), #1A1A1A 0 0 / 100% 100% no-repeat;
+}
+
+.menu-switcher-content {
+	position: absolute;
+	top: 8%;
+	transform: translate(0, -50%);
+	cursor: pointer;
+	opacity: 0;
+	width: 100%;
+	height: 12%;
+	z-index: 999;
+}
+
+.menu-switcher-content-line {
+	position: absolute;
+	z-index: 99;
+	inset: 0;
+	width: 1px;
+	height: 100%;
+	background-color: #D9D9D9;
+	left: var(--position);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.menu-switcher-content-button {
+	position: absolute;
+	z-index: 999;
+	top: 8%;
+	background: url('../images/switcher-icon.svg') 0 0 / 100% 100% no-repeat;
+	display: grid;
+	place-items: center;
+	left: var(--position);
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	width: 29px;
+	height: 29px;
+}

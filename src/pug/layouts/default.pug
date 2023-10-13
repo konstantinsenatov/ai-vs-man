@@ -1,0 +1,36 @@
+doctype html
+
+block vars
+include ../components/_mixins
+
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="description" content="")
+		meta(name="keywords" content="")
+		link(href="css/main.min.css" rel="stylesheet")
+
+		title= `${page.title}`
+
+	body
+		.wrapper
+			#circle-cursor
+			a(href="#header").btn-up.click ВВЕРХ
+			block header
+				include ../partials/_header
+
+			main.main
+				block main
+
+			block footer
+				include ../partials/_footer
+
+		block modals
+
+
+		script(src="js/main.min.js")
+
+		block scripts
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

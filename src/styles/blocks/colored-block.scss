@@ -1,0 +1,42 @@
+.colored-block {
+	background: url('../images/noise.png'), #1A1A1A 0 0 / 100% 100% no-repeat;
+	&__body {
+		padding: 150px 110px 150px;
+		background: var(--gradient, linear-gradient(91deg, #56C0E5 0%, #B977E6 49.48%, #E55C5E 100%));
+		@media (max-width: 1920px){
+			padding: 7.81vw 5.73vw 7.81vw;
+		}
+		@media (max-width: 768px){
+			padding: 10.53vw 2.63vw;
+		}
+	}
+	&__row {
+		display: flex;
+		column-gap: 50px;
+		@media (max-width: 1920px){
+			column-gap: 2.60vw;
+		}
+		@media (max-width: 768px){
+			column-gap: 0;
+			display: block;
+		}
+		p+p{
+			margin-top: 15px;
+			@media (max-width: 1920px){
+				margin-top: 0.78vw;
+			}
+			@media (max-width: 768px){
+				margin-top: 3vw;
+			}
+		}
+	}
+	&__left {
+		flex: 0 1 50%;
+	}
+	&__right {
+		flex: 0 1 50%;
+		@media (max-width: 768px){
+			margin-top: 3vw;
+		}
+	}
+}

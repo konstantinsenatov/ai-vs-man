@@ -1,0 +1,178 @@
+.forum {
+	position: relative;
+	z-index: 9;
+	background: url('../images/noise.png'), #1A1A1A 0 0 / 100% 100% no-repeat;
+	&__container {
+		padding: 150px 0 100px;
+		@media (max-width: 1920px){
+			padding: 7.81vw 0 5.21vw;
+		}
+		@media (max-width: 768px){
+			padding: 21.05vw 2.63vw 10.53vw;
+		}
+	}
+	&__title {
+		padding: 0 250px;
+		@media (max-width: 1920px){
+			padding: 0 13.02vw;
+		}
+		@media (max-width: 768px){
+			padding: 0;
+		}
+
+
+
+
+	}
+	&__text {
+		padding: 0 250px;
+		@media (max-width: 1920px){
+			padding: 0 13.02vw;
+		}
+		@media (max-width: 768px){
+			padding: 0;
+		}
+		&-paragraph {
+			margin-top: 80px;
+			@media (max-width: 1920px){
+				margin-top: 4.17vw;
+			}
+			@media (max-width: 768px){
+				margin-top: 10.53vw;
+			}
+		}
+		&-paragraphs {
+			margin-top: 100px;
+			@media (max-width: 1920px){
+				margin-top: 5.21vw;
+			}
+			@media (max-width: 768px){
+				margin-top: 13.16vw;
+			}
+			p+p {
+				margin-top: 15px;
+				@media (max-width: 1920px){
+					margin-top: 0.78vw;
+				}
+				@media (max-width: 768px){
+					margin-top: 2.63vw;
+				}
+			}
+		}
+		&-bottom {
+			margin-top: 20px;
+			@media (max-width: 1920px){
+				margin-top: 1.04vw;
+			}
+			@media (max-width: 768px){
+				margin-top: 5.26vw;
+			}
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__nums {
+	}
+}
+.nums-forum {
+	margin-top: 100px;
+	padding: 0 110px;
+	@media (max-width: 1920px){
+		margin-top: 5.21vw;
+		padding: 0 5.73vw;
+	}
+	@media (max-width: 768px){
+		margin-top: 13.16vw;
+		padding: 0;
+	}
+	&__row {
+		display: flex;
+		justify-content: center;
+		margin: 0 -35px;
+		@media (max-width: 1920px){
+			margin: 0 -1.82vw;
+		}
+		@media (max-width: 768px){
+			display: block;
+		}
+	}
+	&__item {
+		min-height: 100%;
+		flex: 0 1 33.333%;
+		padding: 0 35px;
+		transform: translate(0, 10%);
+		@media (max-width: 1920px){
+			padding: 0 1.82vw;
+		}
+		@media (max-width: 768px){
+			padding: 0;
+		}
+		&+div {
+			@media (max-width: 768px){
+				margin-top: 7.89vw;
+			}
+		}
+		&:nth-child(1){
+			transition: all 0.5s ease 0s;
+		}
+		&:nth-child(2){
+			transition: all 0.5s ease 0.3s;
+		}
+		&:nth-child(3){
+			transition: all 0.5s ease 0.6s;
+		}
+		&.el-shown {
+			transform: translate(0, 0);
+		}
+	}
+	&__column {
+		min-height: 100%;
+		background: url('../images/corners.png') 0 0 / 100% 100% no-repeat;
+		padding: 55px 35px 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media (max-width: 1920px){
+			padding: 2.86vw 1.82vw 1.04vw;
+		}
+		@media (max-width: 768px){
+			padding: 14.74vw 2.63vw 5.26vw;
+		}
+	}
+	&__num {
+		leading-trim: both;
+		text-edge: cap;
+		font-family: Miratrix;
+		font-size: 50px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%; /* 55px */
+		letter-spacing: 1px;
+		@media (max-width: 1920px){
+			font-size: 2.60vw;
+			letter-spacing: 0.05vw;
+		}
+		@media (max-width: 768px){
+			font-size: 13.16vw;
+		}
+	}
+	&__text {
+		margin-top: 30px;
+		color: var(--white, #FFF);
+		text-align: center;
+		font-family: Fira Sans;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 140%; /* 22.4px */
+		@media (max-width: 1920px){
+			margin-top: 1.56vw;
+			font-size: 0.83vw;
+		}
+		@media (max-width: 768px){
+			margin-top: 7.89vw;
+			font-size: 4.21vw;
+		}
+	}
+}

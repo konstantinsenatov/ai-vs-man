@@ -1,0 +1,31 @@
+/* base */
+@import "base/var";
+@import "base/reset";
+@import "base/fonts";
+
+/* mixin */
+@import "base/mixin";
+
+/*libs*/
+@import "libs/swiper-bundle.min";
+@import "libs/aos";
+
+
+/* main */
+@import "partials/main";
+
+/* components */
+@import "partials/header";
+@import "partials/footer";
+@import "partials/header-menu";
+
+
+/*blocks*/
+@import "blocks/hero";
+@import "blocks/running-line";
+@import "blocks/aivsman";
+@import "blocks/colored-block";
+@import "blocks/forum";
+
+
+

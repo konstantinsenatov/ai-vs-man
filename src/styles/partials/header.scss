@@ -1,0 +1,113 @@
+.header {
+	&__container {
+		padding: 20px 35px;
+		display: flex;
+		align-items: center;
+		width: 1920px;
+		margin: 0 auto;
+		max-width: 100%;
+		@media (max-width: 1920px){
+			padding: 1.04vw 1.82vw;
+			width: 100vw;
+		}
+		@media (max-width: 768px){
+			padding: 3.95vw 5.26vw;
+			justify-content: space-between;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__burger {
+		position: relative;
+		z-index: 999;
+		display: none;
+		width: 13.16vw;
+		height: 3.16vw;
+		position: relative;
+		@media (max-width: 768px){
+			display: block;
+		}
+		span {
+			position: absolute;
+			width: 100%;
+			height: 0.26vw;
+			background: var(--gradient, linear-gradient(91deg, #56C0E5 0%, #B977E6 49.48%, #E55C5E 100%));
+			display: block;
+			left: 0;
+			transition: all 0.3s ease 0s;
+		}
+		span:first-child {
+			top: 0;
+		}
+		span:last-child {
+			top: 100%;
+			transform: translate(0, -100%);
+		}
+		&.js-active {
+			span:first-child {
+				top: 50%;
+				transform: translate(0, -50%) rotate(45deg);
+			}
+			span:last-child {
+				top: 50%;
+				transform: translate(0, -50%) rotate(-45deg);
+			}
+		}
+	}
+	&__left {
+		width: 140px;
+		height: 60px;
+		transform: translate(-30% , 0);
+		@media (max-width: 1920px){
+			width: 7.29vw;
+			height: 3.13vw;
+		}
+		@media (max-width: 768px){
+			display: none;
+		}
+		&.el-shown {
+			transform: translate(0, 0);
+		}
+	}
+	&__center {
+		color: var(--white, #FFF);
+		text-align: center;
+		font-family: Fira Sans;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 165.813%; /* 23.214px */
+		letter-spacing: 0.7px;
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: center;
+		@media (max-width: 1920px){
+			letter-spacing: 0.04vw;
+			font-size: 0.73vw;
+		}
+		@media (max-width: 768px){
+			display: none;
+		}
+	}
+	&__right {
+		width: 190px;
+		height: 60px;
+		transform: translate(30%, 0);
+		@media (max-width: 1920px){
+			width: 9.90vw;
+			height: 3.13vw;
+		}
+		@media (max-width: 768px){
+			width: 30.26vw;
+			height: 9.47vw;
+		}
+		&.el-shown {
+			transform: translate(0, 0);
+		}
+	}
+}
+
+
+

@@ -1,0 +1,22 @@
+@font-face {
+	font-family: Miratrix;
+	src: url('../fonts/Miratrix/Miratrix.eot');
+	src: local('Miratrix'), local('../fonts/Miratrix/Miratrix'),
+		url('../fonts/Miratrix/Miratrix.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Miratrix/Miratrix.woff') format('woff'),
+		url('../fonts/Miratrix/Miratrix.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Fira Sans;
+	src: url('../fonts/FiraSans_Regular/FiraSans_Regular.eot');
+	src: local('FiraSans_Regular'), local('../fonts/FiraSans_Regular/FiraSans_Regular'),
+		url('../fonts/FiraSans_Regular/FiraSans_Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FiraSans_Regular/FiraSans_Regular.woff') format('woff'),
+		url('../fonts/FiraSans_Regular/FiraSans_Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
