@@ -1,1 +1,1 @@
-# ai-vs-man
+# Artificial intelligence vs Man
