@@ -24,6 +24,10 @@ $(document).ready(function() {
 	}
 /* ---------------------появление элементов при прокрутке--------------------------- */
 
+
+
+
+	
 	$('.header__burger').click(function() {
 		$('.header__burger').toggleClass('js-active');
 		$('.menu-header').toggleClass('js-active');
