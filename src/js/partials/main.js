@@ -22,7 +22,7 @@ $(document).ready(function() {
 	for (let elm of elements) {
 		observer.observe(elm);
 	}
-
+/* ---------------------появление элементов при прокрутке--------------------------- */
 
 	$('.header__burger').click(function() {
 		$('.header__burger').toggleClass('js-active');
